@@ -182,8 +182,10 @@ public class LogEventForwarder {
         try {
             LMLogsApiResponse<LogResponse> response = getApi().logIngestPostWithHttpInfo(logEntries);
             logResponse(context, response.getData().getSuccess(), response);
-        } catch (LMLogsApiException e) {
-            logResponse(context, false, e.getResponse());
+        } catch (Exception e) {
+            //logResponse(context, false, e);
+            log(context, Level.INFO,
+                    () -> "Response body: " + e);
         }
     }
 
