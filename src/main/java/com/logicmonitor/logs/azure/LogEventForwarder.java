@@ -184,7 +184,7 @@ public class LogEventForwarder {
             logResponse(context, response.getData().getSuccess(), response);
         } catch (Exception e) {
             //logResponse(context, false, e);
-            log(context, Level.INFO,
+            log(context, Level.SEVERE,
                     () -> "Response body: " + e);
         }
     }
