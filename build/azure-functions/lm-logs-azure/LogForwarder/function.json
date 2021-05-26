@@ -1,0 +1,13 @@
+{
+  "scriptFile" : "../lm-logs-azure-1.3.jar",
+  "entryPoint" : "com.logicmonitor.logs.azure.LogEventForwarder.forward",
+  "bindings" : [ {
+    "type" : "eventHubTrigger",
+    "direction" : "in",
+    "name" : "logEvents",
+    "dataType" : "string",
+    "connection" : "LogsEventHubConnectionString",
+    "eventHubName" : "eventHub",
+    "cardinality" : "MANY"
+  } ]
+}

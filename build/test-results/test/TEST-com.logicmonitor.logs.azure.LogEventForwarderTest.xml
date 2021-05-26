@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.logicmonitor.logs.azure.LogEventForwarderTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2021-04-23T10:46:04" hostname="PNQ-PCHOUDHARY" time="0.075">
+  <properties/>
+  <testcase name="testConfigurationParameters(String, Integer, Integer, Boolean, String)[1]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.007"/>
+  <testcase name="testConfigurationParameters(String, Integer, Integer, Boolean, String)[2]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.003"/>
+  <testcase name="testConfigurationParameters(String, Integer, Integer, Boolean, String)[3]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.003"/>
+  <testcase name="testConfigurationParameters(String, Integer, Integer, Boolean, String)[4]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.004"/>
+  <testcase name="testConfigurationParameters(String, Integer, Integer, Boolean, String)[5]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.004"/>
+  <testcase name="testProcessEvents(String, int)[1]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.004"/>
+  <testcase name="testProcessEvents(String, int)[2]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testProcessEvents(String, int)[3]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testProcessEvents(String, int)[4]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testProcessEvents(String, int)[5]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testProcessEvents(String, int)[6]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.001"/>
+  <testcase name="testProcessEvents(String, int)[7]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.001"/>
+  <testcase name="testProcessEvents(String, int)[8]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.001"/>
+  <testcase name="testgetResourceIds(String, String)[1]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testgetResourceIds(String, String)[2]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testgetResourceIds(String, String)[3]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testgetResourceIds(String, String)[4]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testgetResourceIds(String, String)[5]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testgetResourceIds(String, String)[6]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.001"/>
+  <testcase name="testgetResourceIds(String, String)[7]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.001"/>
+  <testcase name="testgetResourceIds(String, String)[8]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.001"/>
+  <testcase name="testInvalidConfigurationParameters(String, String)[1]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.002"/>
+  <testcase name="testInvalidConfigurationParameters(String, String)[2]" classname="com.logicmonitor.logs.azure.LogEventForwarderTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

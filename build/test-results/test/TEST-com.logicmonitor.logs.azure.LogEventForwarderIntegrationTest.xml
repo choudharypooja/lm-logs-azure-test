@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.logicmonitor.logs.azure.LogEventForwarderIntegrationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-04-23T10:46:02" hostname="PNQ-PCHOUDHARY" time="1.117">
+  <properties/>
+  <testcase name="testForward" classname="com.logicmonitor.logs.azure.LogEventForwarderIntegrationTest" time="1.01"/>
+  <testcase name="testForwardActivityLogs" classname="com.logicmonitor.logs.azure.LogEventForwarderIntegrationTest" time="0.061"/>
+  <testcase name="testForwardEmptyList" classname="com.logicmonitor.logs.azure.LogEventForwarderIntegrationTest" time="0.045"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Apr 23, 2021 4:16:02 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
+INFO: Creating GrizzlyTestContainer configured at the base URI http://localhost:<AVAILABLE-PORT>/
+Apr 23, 2021 4:16:03 PM org.glassfish.jersey.server.wadl.WadlFeature configure
+WARNING: JAXBContext implementation could not be found. WADL feature is disabled.
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [localhost:52412]
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer] Started.
+Apr 23, 2021 4:16:03 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer start
+INFO: Started GrizzlyTestContainer at the base URI http://localhost:52412/
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [localhost:52412]
+Apr 23, 2021 4:16:03 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
+INFO: Creating GrizzlyTestContainer configured at the base URI http://localhost:<AVAILABLE-PORT>/
+Apr 23, 2021 4:16:03 PM org.glassfish.jersey.server.wadl.WadlFeature configure
+WARNING: JAXBContext implementation could not be found. WADL feature is disabled.
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [localhost:52414]
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer-1] Started.
+Apr 23, 2021 4:16:03 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer start
+INFO: Started GrizzlyTestContainer at the base URI http://localhost:52414/
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [localhost:52414]
+Apr 23, 2021 4:16:03 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
+INFO: Creating GrizzlyTestContainer configured at the base URI http://localhost:<AVAILABLE-PORT>/
+Apr 23, 2021 4:16:03 PM org.glassfish.jersey.server.wadl.WadlFeature configure
+WARNING: JAXBContext implementation could not be found. WADL feature is disabled.
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [localhost:52416]
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer-2] Started.
+Apr 23, 2021 4:16:03 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer start
+INFO: Started GrizzlyTestContainer at the base URI http://localhost:52416/
+Apr 23, 2021 4:16:03 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [localhost:52416]
+]]></system-err>
+</testsuite>

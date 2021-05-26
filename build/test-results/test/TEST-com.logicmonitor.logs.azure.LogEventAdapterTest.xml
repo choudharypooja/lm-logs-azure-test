@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.logicmonitor.logs.azure.LogEventAdapterTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2021-04-23T10:46:04" hostname="PNQ-PCHOUDHARY" time="0.069">
+  <properties/>
+  <testcase name="testApply(String, int)[1]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.021"/>
+  <testcase name="testApply(String, int)[2]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.002"/>
+  <testcase name="testApply(String, int)[3]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.002"/>
+  <testcase name="testApply(String, int)[4]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <testcase name="testApply(String, int)[5]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <testcase name="testApply(String, int)[6]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <testcase name="testApply(String, int)[7]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <testcase name="testApply(String, int)[8]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <testcase name="testApply(String, int)[9]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <testcase name="testCreateEntry(String, String, String, String)[1]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.003"/>
+  <testcase name="testCreateEntry(String, String, String, String)[2]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.004"/>
+  <testcase name="testCreateEntry(String, String, String, String)[3]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <testcase name="testCreateEntry(String, String, String, String)[4]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.003"/>
+  <testcase name="testCreateEntry(String, String, String, String)[5]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.003"/>
+  <testcase name="testCreateEntry(String, String, String, String)[6]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.002"/>
+  <testcase name="testCreateEntry(String, String, String, String)[7]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <testcase name="testCreateEntry(String, String, String, String)[8]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.002"/>
+  <testcase name="testCreateEntry(String, String, String, String)[9]" classname="com.logicmonitor.logs.azure.LogEventAdapterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

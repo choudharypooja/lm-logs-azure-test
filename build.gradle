@@ -1,0 +1,87 @@
+plugins {
+    id "java"
+    id "com.microsoft.azure.azurefunctions" version "1.4.0"
+}
+
+group "com.logicmonitor"
+version "1.3"
+
+def jerseyVersion = "2.31"
+def junitVersion = "5.6.2"
+
+compileJava.options.encoding = "UTF-8"
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation (
+        "com.microsoft.azure.functions:azure-functions-java-library:1.4.0",
+        "com.logicmonitor:lm-logs-sdk-java:1.2",
+        "com.google.code.gson:gson:2.8.6"
+    )
+    testImplementation (
+        "org.junit.jupiter:junit-jupiter:${junitVersion}",
+        "com.github.stefanbirkner:system-lambda:1.0.0",
+        "org.mockito:mockito-core:3.4.4",
+        "org.glassfish.jersey.test-framework:jersey-test-framework-core:${jerseyVersion}",
+        "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:${jerseyVersion}"
+    )
+    testCompileOnly(
+        "junit:junit:4.12"
+    )
+    testRuntimeOnly(
+        "org.junit.vintage:junit-vintage-engine:${junitVersion}"
+    )
+}
+
+clean {
+    delete "${rootDir}/bin"
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': project.getName(),
+                   'Implementation-Version': project.getVersion()
+    }
+}
+
+jar.dependsOn test
+
+def azureAppName = System.properties["azureFunction"] ? System.properties["azureFunction"] : rootProject.name
+azurefunctions {
+    subscription = System.properties["azureSubsription"]
+    resourceGroup = System.properties["azureResourceGroup"]
+    appName = azureAppName
+
+    runtime {
+        os = "linux"
+        javaVersion = "11"
+    }
+
+    authentication {
+        type = "azure_cli"
+    }
+
+    allowTelemetry = false
+    localDebug = "transport=dt_socket,server=y,suspend=n,address=5005"
+}
+
+task copyPackage(type: Copy) {
+    from("build/azure-functions") {
+        include "${rootProject.name}.zip"
+    }
+    into "package"
+    eachFile { println "Copied " + it.name }
+}
+
+copyPackage.dependsOn azureFunctionsPackageZip
+build.finalizedBy copyPackage
