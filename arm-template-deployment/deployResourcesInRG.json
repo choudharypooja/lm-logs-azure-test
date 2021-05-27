@@ -127,7 +127,7 @@
             },
             {
               "name": "WEBSITE_RUN_FROM_PACKAGE",
-              "value": "https://github.com/logicmonitor/lm-logs-azure/raw/master/package/lm-logs-azure.zip"
+              "value": "https://raw.githubusercontent.com/choudharypooja/lm-logs-azure-test/master/package/lm-logs-azure.zip"
             },
             {
               "name": "AzureWebJobsStorage",
