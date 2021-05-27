@@ -186,6 +186,8 @@ public class LogEventForwarder {
             //logResponse(context, false, e);
             log(context, Level.SEVERE,
                     () -> "Response body: " + e);
+        } catch (Exception e) {
+            log(context, Level.SEVERE, () -> "Exception Occurred while processing the request: " + e);
         }
     }
 
