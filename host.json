@@ -12,14 +12,5 @@
                 "prefetchCount": 300
             }
         }
-    },
-    "logging": {
-        "fileLoggingMode": "always",
-        "logLevel": {
-            "default": "Information",
-            "Host.Results": "Error",
-            "Function": "Trace",
-            "Host.Aggregator": "Trace"
-        }
     }
 }
