@@ -49,7 +49,7 @@
           "[concat('https://raw.githubusercontent.com/logicmonitor/lm-logs-azure/',parameters('sourceCodeBranch'),'/diagnostic-settings-scripts/policyAssignment.ps1')]",
           "[concat('https://raw.githubusercontent.com/logicmonitor/lm-logs-azure/',parameters('sourceCodeBranch'),'/diagnostic-settings-scripts/policyInitiativeRemediation.ps1')]"
         ],
-        "cleanupPreference": "OnSuccess",
+        "cleanupPreference": "OnExpiration",
         "retentionInterval": "P1D"
       }
     }
