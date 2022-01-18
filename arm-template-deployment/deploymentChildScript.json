@@ -46,7 +46,7 @@
           "https://raw.githubusercontent.com/logicmonitor/lm-logs-azure/master/diagnostic-settings-scripts/policyAssignment.ps1",
           "https://raw.githubusercontent.com/logicmonitor/lm-logs-azure/master/diagnostic-settings-scripts/policyInitiativeRemediation.ps1"
         ],
-        "cleanupPreference": "Always",
+        "cleanupPreference": "OnSuccess",
         "retentionInterval": "P1D"
       }
     }
