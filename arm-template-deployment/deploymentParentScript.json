@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "subscriptionId": {
@@ -15,7 +15,7 @@
     }
   },
   "variables": {
-    "templateBaseUri": "https://raw.githubusercontent.com/logicmonitor/lm-logs-azure/master/arm-template-deployment/",
+    "templateBaseUri": "[concat('https://raw.githubusercontent.com/choudharypooja/lm-logs-azure-test/',variables('sourceCodeBranch'),'/arm-template-deployment/')]",
     "deploymentResourceGroupName": "[concat('lm-logs-',parameters('LM_Company_name'),'-',resourceGroup().Location,'-group')]",
     "managedIdentityName": "[concat('msi-', variables('deploymentResourceGroupName'), '-deploy')]",
     "managedIdentityId": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', variables('deploymentResourceGroupName'), '/providers/Microsoft.ManagedIdentity/userAssignedIdentities/', variables('managedIdentityName'))]"
@@ -23,7 +23,7 @@
   "resources": [
     {
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2017-05-10",
+      "apiVersion": "2021-04-01",
       "name": "linkedTemplatedeployment",
       "properties": {
         "mode": "Incremental",
@@ -49,6 +49,10 @@
           },
           "location": {
             "value": "[resourceGroup().Location]"
+          }
+          ,
+          "sourceCodeBranch": {
+            "value": "[variables('sourceCodeBranch')]"
           }
         }
       },
