@@ -28,7 +28,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(variables('templateBaseUri'), 'deploymentChildScript.json')]",
+          "uri": "[concat(variables('templateBaseUri'), 'deploymentChildScript1.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
