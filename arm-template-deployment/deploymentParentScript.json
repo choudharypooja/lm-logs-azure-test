@@ -15,6 +15,7 @@
     }
   },
   "variables": {
+    "sourceCodeBranch": "master",
     "templateBaseUri": "[concat('https://raw.githubusercontent.com/choudharypooja/lm-logs-azure-test/',variables('sourceCodeBranch'),'/arm-template-deployment/')]",
     "deploymentResourceGroupName": "[concat('lm-logs-',parameters('LM_Company_name'),'-',resourceGroup().Location,'-group')]",
     "managedIdentityName": "[concat('msi-', variables('deploymentResourceGroupName'), '-deploy')]",
