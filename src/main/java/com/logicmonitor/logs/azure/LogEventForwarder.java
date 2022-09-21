@@ -170,7 +170,7 @@ public class LogEventForwarder {
                     connection = "LogsEventHubConnectionString") List<String> logEvents,
             final ExecutionContext context
     ) {
-        List<LogEntry> logEntries = processEvents(logEvents);
+        List<LogEntry> logEntries = processEvents(logEvents, context);
         if (logEntries.isEmpty()) {
             log(context, Level.INFO, () -> "No entries to send");
             return;
@@ -185,7 +185,7 @@ public class LogEventForwarder {
         } catch (LMLogsApiException e) {
             logResponse(context, false, e.getResponse());
         } catch (Exception e) {
-            log(context, Level.SEVERE, () -> "Exception Occurred while processing the request: " + e);
+            log(context, Level.SEVERE, () -> "Exception occurred while processing the request: " + e);
         }
     }
 
@@ -194,7 +194,8 @@ public class LogEventForwarder {
      * @param logEvents list of JSON strings containing Azure events
      * @return the log entries
      */
-    protected static List<LogEntry> processEvents(List<String> logEvents) {
+    protected static List<LogEntry> processEvents(List<String> logEvents, ExecutionContext context) {
+        logEvents.forEach(s -> log(context, Level.INFO, () -> "receiving events" + logEvents));
         return logEvents.stream()
             .map(getAdapter())
             .flatMap(List::stream)
