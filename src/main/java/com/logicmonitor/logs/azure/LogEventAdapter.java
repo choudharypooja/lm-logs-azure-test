@@ -147,7 +147,7 @@ public class LogEventAdapter implements Function<String, List<LogEntry>> {
                     .map(Instant::getEpochSecond)
                     .ifPresent(entry::setTimestamp);
         } catch(Exception e){
-            log(context, Level.WARNING, () -> "event does not have time in  DateTimeFormatter.ISO_INSTANT. Will use log-ingest time " + event);
+            entry.setTimestamp(System.currentTimeMillis());
         }
 
         // get properties from event if present
