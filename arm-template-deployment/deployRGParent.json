@@ -33,7 +33,7 @@
     }
   },
   "variables": {
-    "templateBaseUri": "https://raw.githubusercontent.com/logicmonitor/lm-logs-azure/master/arm-template-deployment/",
+    "templateBaseUri": "https://raw.githubusercontent.com/choudharypooja/lm-logs-azure-test/master/arm-template-deployment/",
     "deploymentResourceGroupName": "[concat('lm-logs','-',parameters('LM_Company_name'), '-', replace(parameters('resource_group_region'),' ',''),'-group')]",
     "eventhubNamespace": "[concat('lm-logs','-',parameters('LM_Company_name'), '-', replace(parameters('resource_group_region'),' ',''))]",
     "eventhubLogsName": "log-hub",
