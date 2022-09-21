@@ -77,6 +77,8 @@ public class LogEventAdapter implements Function<String, List<LogEntry>> {
 
     private final String azureClientId;
 
+    private static ExecutionContext context;
+
     public LogEventAdapter(String regexScrub, String azureClientId) throws PatternSyntaxException {
         if (regexScrub != null) {
             scrubPattern = Pattern.compile(regexScrub);
@@ -145,7 +147,7 @@ public class LogEventAdapter implements Function<String, List<LogEntry>> {
                     .map(Instant::getEpochSecond)
                     .ifPresent(entry::setTimestamp);
         } catch(Exception e){
-
+            log(context, Level.WARNING, () -> "event does not have time in  DateTimeFormatter.ISO_INSTANT. Will use log-ingest time " + event);
         }
 
         // get properties from event if present
@@ -176,7 +178,7 @@ public class LogEventAdapter implements Function<String, List<LogEntry>> {
     private static void log(final ExecutionContext context, Level level,
                             Supplier<String> msgSupplier) {
         context.getLogger().log(level, () -> String.format("[%s][%s] %s",
-                context.getFunctionName(), context.getInvocationId(), msgSupplier.get()));
+                context.getFunctionName(), msgSupplier.get()));
     }
 
 }
