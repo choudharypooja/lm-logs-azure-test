@@ -19,6 +19,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
@@ -30,6 +33,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.logicmonitor.logs.model.LogEntry;
+import com.microsoft.azure.functions.ExecutionContext;
 
 /**
  * Transforms one JSON string into one or multiple log entries.<br>
@@ -99,6 +103,7 @@ public class LogEventAdapter implements Function<String, List<LogEntry>> {
      */
     @Override
     public List<LogEntry> apply(String jsonString) {
+        System.out.println("jsonString "+ jsonString);
         JsonObject log = GSON.fromJson(jsonString, JsonObject.class);
         // if the JSON object contains "records" array, transform its members
         return Optional.ofNullable(log.get(AZURE_RECORDS_PROPERTY))
@@ -120,6 +125,8 @@ public class LogEventAdapter implements Function<String, List<LogEntry>> {
      * @return log entry
      */
     protected LogEntry createEntry(JsonObject json) {
+
+
         LogEventMessage event = GSON.fromJson(json, LogEventMessage.class);
         LogEntry entry = new LogEntry();
         if ((event.getCategory() != null) && (AUDIT_LOG_CATEGORIES.contains(event.getCategory().toLowerCase()))) {
@@ -132,10 +139,14 @@ public class LogEventAdapter implements Function<String, List<LogEntry>> {
         }
 
         // timestamp as epoch
-        Optional.ofNullable(event.getTime())
-            .map(Instant::parse)
-            .map(Instant::getEpochSecond)
-            .ifPresent(entry::setTimestamp);
+        try {
+            Optional.ofNullable(event.getTime())
+                    .map(Instant::parse)
+                    .map(Instant::getEpochSecond)
+                    .ifPresent(entry::setTimestamp);
+        } catch(Exception e){
+
+        }
 
         // get properties from event if present
         Optional<LogEventProperties> properties = Optional.ofNullable(event.getProperties());
@@ -154,6 +165,18 @@ public class LogEventAdapter implements Function<String, List<LogEntry>> {
         entry.setMessage(message);
 
         return entry;
+    }
+
+    /**
+     * Logs a message with function name and invocation ID.
+     * @param context execution context
+     * @param level logging level
+     * @param msgSupplier produces the message to log
+     */
+    private static void log(final ExecutionContext context, Level level,
+                            Supplier<String> msgSupplier) {
+        context.getLogger().log(level, () -> String.format("[%s][%s] %s",
+                context.getFunctionName(), context.getInvocationId(), msgSupplier.get()));
     }
 
 }
