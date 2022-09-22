@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "subscriptionId": {
-      "type": "String"
+      "value": "318382e3-a165-4f0d-8906-01fb4cd06b74"
     },
     "LM_Company_name": {
-      "type": "String"
+      "value": "lmpoojachoudhary"
     },
     "forceUpdateTag": {
-      "defaultValue": "[utcNow()]",
+      "value": "[utcNow()]",
       "type": "String",
       "metadata": "Please do not edit this setting"
     },
@@ -21,7 +21,7 @@
       "metadata": {
         "description": "region for deployment script"
       },
-      "defaultValue": "West US"
+      "value": "West US"
     }
   }
 }
