@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "subscriptionId": {
+      "type": "String"
+    },
+    "LM_Company_name": {
+      "type": "String"
+    },
+    "forceUpdateTag": {
+      "defaultValue": "[utcNow()]",
+      "type": "String",
+      "metadata": "Please do not edit this setting"
+    },
+    "deploymentLocation": {
+      "type": "string",
+      "allowedValues": [
+        "Australia East","Australia Southeast","Brazil South","Canada Central","Canada East","Central India","Central US","East Asia","East US","East US 2","France Central","Germany West Central","Japan East","Japan West","Korea Central","North Central US","North Europe","Norway East","South Central US","Southeast Asia","South India","Switzerland North","UK South","UK West","UAE North","West Central US","West Europe","West US","West US 2"
+      ],
+      "metadata": {
+        "description": "region for deployment script"
+      },
+      "defaultValue": "West US"
+    }
+  }
+}
