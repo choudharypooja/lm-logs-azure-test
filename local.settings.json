@@ -2,17 +2,17 @@
     "IsEncrypted": false,
     "Values": {
         "FUNCTIONS_WORKER_RUNTIME": "java",
-        "FUNCTIONS_EXTENSION_VERSION": "~3",
+        "FUNCTIONS_EXTENSION_VERSION": "~4",
         "FUNCTIONS_WORKER_PROCESS_COUNT": "1",
-        "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=oojachoudharybrazilsouth;AccountKey=LXLg7bR1/ld/9zE/OntwaX4yC8YErx1W/sWuv8rzyfC4WUSzCxTSQpvkfVUBo2fFFhlKF2TQVwl9rwqo7TJywQ==",
-        "LogsEventHubConnectionString": "Endpoint=sb://lm-logs-lmpoojachoudhary-brazilsouth.servicebus.windows.net/;SharedAccessKeyName=listener;SharedAccessKey=U9HkFz6z2mDtCPlTAugArcSF1EEgeU6RpizLUIMVsFg=;EntityPath=log-hub",
-        "LogicMonitorCompanyName": "lmpoojachoudha",
-        "LogicMonitorAccessId": "Et9vIH4IkI5L23vKr8Q2",
-        "LogicMonitorAccessKey": "9h3(2]5477+^99fNgj6+_f4I)QS)23d=3djk[m3z",
+        "AzureWebJobsStorage": "<Web Storage connection string>",
+        "LogsEventHubConnectionString": "<Event Hub connection string>",
+        "LogicMonitorCompanyName": "<LogicMonitor company name>",
+        "LogicMonitorAccessId": "<LogicMonitor access ID>",
+        "LogicMonitorAccessKey": "<LogicMonitor access key>",
         "LogApiClientConnectTimeout": "10000",
         "LogApiClientReadTimeout": "10000",
-        "LogApiClientDebugging": "true",
+        "LogApiClientDebugging": "false",
         "LogRegexScrub": "<regex pattern>",
-        "AzureClientID": "9e10c96a-3ffe-4f5e-9727-89500ac54a16"
+        "AzureClientID": "<Azure Application ID>"
     }
 }
