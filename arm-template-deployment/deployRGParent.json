@@ -31,6 +31,12 @@
       },
       "defaultValue": "Yes"
     }
+    ,
+      "additionalMetadata": {
+        "type": "object",
+        "defaultValue": {
+        }
+      }
   },
   "variables": {
     "templateBaseUri": "https://raw.githubusercontent.com/choudharypooja/lm-logs-azure-test/master/arm-template-deployment/",
@@ -75,6 +81,9 @@
           },
           "Azure_Client_Id": {
             "value": "[parameters('Azure_Client_Id')]"
+          },
+          "additionalMetadata": {
+            "value": "[parameters('additionalMetadata')]"
           }
         }
       },
