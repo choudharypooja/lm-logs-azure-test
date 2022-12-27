@@ -16,6 +16,9 @@
     },
     "azure_region": {
       "type": "string"
+    },
+    "additionalMetadata": {
+      "type": "object"
     }
   },
   "variables": {
@@ -168,6 +171,10 @@
             {
               "name": "LogRegexScrub",
               "value": "<regex pattern>"
+            },
+            {
+              "name": "additionalMetadata",
+              "value": "[parameters('additionalMetadata')]"
             }
           ]
         }
